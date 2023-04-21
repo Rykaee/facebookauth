@@ -53,7 +53,7 @@ else
  // Get login url
     $facebook_permissions = ['email']; // Optional permissions
     
-    $local = 'http://localhost/facb/index.php';
+    $local = 'http://localhost/facb/index.php'; //Place your address.
     $facebook_login_url = $facebook_helper->getLoginUrl($local, $facebook_permissions);
     
     // Render Facebook login button
