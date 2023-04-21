@@ -52,8 +52,9 @@ else
 {
  // Get login url
     $facebook_permissions = ['email']; // Optional permissions
-
-    $facebook_login_url = $facebook_helper->getLoginUrl('http://localhost/facb/index.php', $facebook_permissions);
+    
+    $local = 'http://localhost/facb/index.php';
+    $facebook_login_url = $facebook_helper->getLoginUrl($local, $facebook_permissions);
     
     // Render Facebook login button
     $facebook_login_url = '<a href="'.$facebook_login_url.'"><button type="button" class="btn btn-primary btn-lg btn-block">Kirjaudu sisään</button></a>';
