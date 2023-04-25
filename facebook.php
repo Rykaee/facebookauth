@@ -1,6 +1,12 @@
 <?php
 
-//index.php
+/*
+FACEBOOK AUTH - Index file
+Author: Roosa Kontinen, 2022.
+--------------
+
+Getting information about authed user. 
+*/
 
 include('config.php');
 
