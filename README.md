@@ -1,3 +1,3 @@
 # facebookauth
 
-authentication for facebook
+Facebook Auth with Login / Logout system.
