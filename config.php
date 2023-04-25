@@ -1,5 +1,13 @@
 <?php
 
+/*
+FACEBOOK AUTH - Config file.
+Author: Roosa Kontinen, 2022.
+--------------
+
+Add your App ID, App Secret
+*/
+
 require_once 'vendor/autoload.php';
 
 if (!session_id())
@@ -8,10 +16,11 @@ if (!session_id())
 }
 
 // Call Facebook API
+// Need to paste App ID, App Secret
 
 $facebook = new \Facebook\Facebook([
-  'app_id'      => '588445199458514',
-  'app_secret'     => '3b65dc87fa82a552f9d9d59c842a7abc',
+  'app_id'      => '',
+  'app_secret'     => '',
   'default_graph_version'  => 'v2.10'
 ]);
 
