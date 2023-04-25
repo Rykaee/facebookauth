@@ -1,14 +1,7 @@
 <?php
 
-/*
-FACEBOOK AUTH
-Author: Roosa Kontinen, 2022.
---------------
+//index.php
 
-Getting access token, email and user name from user.
-*/
-
-// In the config.php, you need to paste App ID, App Secret
 include('config.php');
 
 $facebook_output = '';
@@ -57,20 +50,18 @@ if(isset($_GET['code']))
 }
 else
 {
-  //Paste here your login URL
-  $login_url = '';
-
  // Get login url
     $facebook_permissions = ['email']; // Optional permissions
 
-    $facebook_login_url = $facebook_helper->getLoginUrl($login_url, $facebook_permissions);
+    $facebook_login_url = $facebook_helper->getLoginUrl('http://localhost/facb/index.php', $facebook_permissions);
     
     // Render Facebook login button
     $facebook_login_url = '<a href="'.$facebook_login_url.'"><button type="button" class="btn btn-primary btn-lg btn-block">Kirjaudu sisään</button></a>';
 }
 
-?>
 
+
+?>
 <html>
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -87,7 +78,7 @@ else
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v14.0&appId=795798638116045&autoLogAppEvents=1" nonce="IXHgMayE"></script>
   <div class="container">
    <br />
-   <h2 style="align-items:center;">Facebook Login</h2>
+   <h2 style="align:center">Facebook Login</h2>
    <br />
    <div class="panel panel-default">
     <?php 
